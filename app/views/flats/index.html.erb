@@ -1,0 +1,18 @@
+
+
+<div class="cards">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-xs-4">
+        <div class="card">
+          <div class="card-title"><%= flat.name %></div>
+          <div class="card-address"><%= flat.address %></div>
+          <div class="description"><%= flat.description %></div>
+          <div class="price"><%= flat.price_per_night %></div>
+          <div class="guest"><%= flat.number_of_guests %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Add a flat', new_flat_path %>
